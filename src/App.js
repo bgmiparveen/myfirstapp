@@ -45,7 +45,7 @@ function App() {
       <Navbar title="My first app" aboutText="about text" mode= {mode} //variable mode pass karvaya hai so don't use backticks
        toggleMode={toggleMode} />
       {/* <Navbar  /> */}
-     <div className="container" style={{height:"56px"}} >
+     <div className="container" style={{height:"80px"}} >
        <Alert alert={alert} />  {/* ye alert setalert wala alert hai jiski initial valua is null jo aage props me pass hoga */}
       
        </div> 
