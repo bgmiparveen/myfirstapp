@@ -6,18 +6,25 @@ export default function Formtext(props) {
    let newText = text.toUpperCase();
   //  jab koi button par click karega to newtext jo hoga wo uppercase hoga
    setText(newText)
+   props.showAlert('Converted to Uppercase', 'Success')
  }
  const handleLoClick= ()=>{
    let newText = text.toLowerCase();
    setText(newText)
+   props.showAlert('Converted to Lowercase', 'Success')
+
  }
  const handleclearClick= ()=>{
    let newText = '';
    setText(newText)
+   props.showAlert('Text has been Cleared', 'Success')
+
  }
  const handleTitleClick= ()=>{
    let newText = text.charAt(0).toUpperCase() + text.substr(1).toLowerCase()  ;
    setText(newText)
+   props.showAlert('Converted to Title', 'Success')
+
  }
 //  without event we cant write in the text area
 //  hum event ke bina setText means jo hamari value ko update karta ha wo update nhi kar pata means ki hum (hum likh nhi pate means ki    setText(event.target.value) yah hamari write ki value ko sath sath update karta hai which is display us means onchange hame dikhta hai   )
@@ -39,15 +46,15 @@ export default function Formtext(props) {
 <div className="mb-3 my-3 ">
   <textarea className="form-control  "  style={{background:props.mode==='dark'?'#54546e':'white' , color:props.mode==='dark'?'white':'black' }} value={text} onChange={handleOnChange} id="exampleFormControlTextarea1" rows="8"></textarea>
 </div>
-<button className="btn btn-primary mx-2" onClick={handleupClick} >switch to uppercase</button>
-<button className="btn btn-primary mx-2" onClick={handleLoClick} >switch to lowercase</button>
-<button className="btn btn-primary mx-2" onClick={handleTitleClick} >switch to Title</button>
-<button className="btn btn-primary mx-2" onClick={handleclearClick} >Clear</button>
+<button className="btn btn-primary my-2 mx-2" onClick={handleupClick} >switch to uppercase</button>
+<button className="btn btn-primary my-2 mx-2" onClick={handleLoClick} >switch to lowercase</button>
+<button className="btn btn-primary my-2 mx-2" onClick={handleTitleClick} >switch to Title</button>
+<button className="btn btn-primary my-2 mx-2" onClick={handleclearClick} >Clear</button>
        </div>
 
 <h2>Your text summery</h2>
-<p>{text.split(" ").length} words and {text.length} characters </p>
-<p> {0.008*text.split(" ").length} Minutes to read the text </p>
+<p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters </p>
+<p> {0.008*text.split(" ").filter((element)=>{return element.length!==0}).length} Minutes to read the text </p>
 <h2>Preview</h2>
 <p>{text} </p>
        </div>
