@@ -1,0 +1,10 @@
+update the repositry ()=>
+
+1 open the folder in gitbash by rightclick in the folder (folder= updated repositry folder)
+ (optional) check status by commands
+ {  Commands()=> 1   git status
+                 2   git add .
+                 3   git commit -m "commit by any name"
+                 4   git push   }
+then open the repo folder in VS Code and open terminal and then run command
+  {  Commands()=> npm run deploy    }
