@@ -10,6 +10,7 @@
                  4   git push   }
 then open the repo folder in VS Code and open terminal and then run command
   {  Commands()=> npm run deploy    }
+  to live the project
 
 
 
