@@ -1,10 +1,53 @@
-update the repositry ()=>
+***update the repositry ()=>***
 
 1 open the folder in gitbash by rightclick in the folder (folder= updated repositry folder)
+ 
  (optional) check status by commands
  {  Commands()=> 1   git status
+               
                  2   git add .
                  3   git commit -m "commit by any name"
                  4   git push   }
 then open the repo folder in VS Code and open terminal and then run command
   {  Commands()=> npm run deploy    }
+
+
+
+***How to first time push on git()=>***
+ 
+  open the folder in gitbash by rightclick in the folder (folder= To push repositry folder to git)
+
+(optional) check status to whether the repositroy is add or not commands
+   Commands()=> 1  git status
+                
+                2  git init
+               (optional) check status
+                3  git status 
+                4  git add .
+                5  git commit -m "commit by any name"
+                
+then go to the git account page 
+create a new repository by a unique website name
+and then go down 
+then to push the existing repository by copy the command lines  
+and paste to run the command lines in the git bash one by one
+
+***How to live this project***
+
+1 Search on google "first react app deployment"
+open the react app deployment site
+  then CTRL+F and search github pages 
+    copied it and paste in package.json on the top scripts in the VS Code "homepage": "https://myusername.github.io/my-app"
+then run command
+        "npm install --save gh-pages" in the terminal
+  then copy and paste 
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build", 
+ in scripts in the package
+then run command in terminal
+         npm run deploy
+    
+then go to github account setting and check the branch is selected 
+         gh-pages branch
+ it takes 4-5 minutes to be publish live then we can see it from anywhere
+ 
